@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    background: #0f172a;
+    color: #e5e7eb;
+    font-family: Segoe UI, Arial, sans-serif;
+}
+
+header {
+    background: #020617;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header h1, nav a {
+    color: #ff4d6d;
+}
+
+.hero {
+    text-align: center;
+    padding: 90px 20px;
+}
+
+.hero-img {
+    max-width: 520px;
+    border-radius: 14px;
+}
+
+button {
+    background: #ff4d6d;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.movie-card {
+    max-width: 340px;
+    margin: auto;
+    background: #020617;
+    border-radius: 14px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.anime-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: black;
+}
