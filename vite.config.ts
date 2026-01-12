@@ -1,9 +1,9 @@
 import { defineConfig } from "vite";
 
 export default defineConfig({
-    base: "./",
-    build: {
-        outDir: "dist",
-        emptyOutDir: true
-    }
+  base: "/filmflareSD369/",
+  build: {
+    outDir: "docs",
+    emptyOutDir: true
+  }
 });
