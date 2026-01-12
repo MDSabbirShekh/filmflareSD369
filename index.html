@@ -276,5 +276,36 @@
     <p>© 2026 <span>ḾĎ ẞâƃɀr ẞë̈ʞk</span> | All Rights Reserved</p>
 </footer>
 
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  // PLAY buttons
+  document.querySelectorAll(".btn-play").forEach(button => {
+    button.addEventListener("click", () => {
+      const url = button.dataset.playUrl;
+      if (url) {
+        window.open(url, "_blank", "noopener");
+      }
+    });
+  });
+
+  // DOWNLOAD buttons
+  document.querySelectorAll(".btn-download").forEach(button => {
+    button.addEventListener("click", () => {
+      const url = button.dataset.downloadUrl;
+      if (url) {
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "";
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+      }
+    });
+  });
+
+});
+</script>
+
 </body>
 </html>
