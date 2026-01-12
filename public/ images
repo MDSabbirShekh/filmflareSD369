@@ -1,6 +1,6 @@
-hero-movies.jpg
-firefly-light.png
-anime1.jpg
-anime2.jpg
-anime3.jpg
-anime4.jpg
+<img src="/images/hero-movies.jpg" class="hero-img" alt="Featured Anime Movies">
+
+<img src="/images/anime1.jpg">
+<img src="/images/anime2.jpg">
+<img src="/images/anime3.jpg">
+<img src="/images/anime4.jpg">
