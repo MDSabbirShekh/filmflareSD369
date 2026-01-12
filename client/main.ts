@@ -9,21 +9,34 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function setupHeroButton(): void {
-    const btn = document.getElementById("getStartedBtn");
-    btn?.addEventListener("click", () => {
-        document.getElementById("movies")?.scrollIntoView({ behavior: "smooth" });
+    const btn = document.querySelector<HTMLButtonElement>(".hero button");
+    if (!btn) return;
+
+    btn.addEventListener("click", () => {
+        document
+            .querySelector(".movie-section")
+            ?.scrollIntoView({ behavior: "smooth" });
     });
 }
 
 function setupMovieButtons(): void {
-    document.querySelectorAll<HTMLButtonElement>(".movie-buttons button")
-        .forEach(btn => {
-            const action = btn.dataset.action;
-            if (action === "play") {
-                btn.onclick = () => alert("▶ Streaming will start soon.");
-            }
-            if (action === "download") {
-                btn.onclick = () => alert("⬇ Download link coming soon.");
-            }
+    document.querySelectorAll<HTMLButtonElement>(".btn-play").forEach((btn) => {
+        btn.addEventListener("click", () => {
+            const url = btn.dataset.playUrl;
+            if (!url) return;
+
+            // Google Drive preview opens correctly everywhere
+            window.location.href = url;
         });
+    });
+
+    document.querySelectorAll<HTMLButtonElement>(".btn-download").forEach((btn) => {
+        btn.addEventListener("click", () => {
+            const url = btn.dataset.downloadUrl;
+            if (!url) return;
+
+            // Forces download
+            window.location.href = url;
+        });
+    });
 }
