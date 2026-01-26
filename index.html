@@ -10,7 +10,7 @@
     <!-- SEO META -->
     <meta name="description" content="FilmflareSD369 – Watch and download latest anime movies in HD & dual audio. Fast, responsive, and optimized for all devices.">
     <meta name="keywords" content="anime movies, watch anime online, download anime, FilmflareSD369">
-    <meta name="author" content="MD Bagr Bekk">
+    <meta name="author" content="MD Bag Bekk">
 
     <style>
         * {
@@ -226,38 +226,18 @@
         Stream and download the latest anime movies with fast performance,
         modern UI, and full mobile support.
     </p>
-    <img src="s/hero-movies.jpg" alt="Featured Anime Movies" class="hero-img">
+    <!-- ✅ hero-movies সরাসরি docs folder-এ -->
+    <img alt="Featured Anime Movies" class="hero-img" src="hero-movies.jpg">
     <button>Get Started</button>
-</section>
-
-<section class="movie-section">
-  <div class="movie-card">
-    <img src="images/firefly-light.png" alt="Into the Forest of Firefly Light">
-    <h3>Into the Forest of Firefly Light</h3>
-    <p>Anime Movie • HD • Dual Audio</p>
-   <div class="movie-buttons">
-    <button
-        class="btn-play"
-        data-play-url="https://drive.google.com/file/d/1WWH6KAOBZpKJtSNkvH94DTWprvvBjXJj/preview">
-        Play
-    </button>
-
-    <button
-        class="btn-download"
-        data-download-url="https://drive.google.com/uc?export=download&id=1WWH6KAOBZpKJtSNkvH94DTWprvvBjXJj">
-        Download
-    </button>
-</div>
-  </div>
 </section>
 
 <section class="anime-section">
     <h2>New Anime Movies</h2>
     <div class="anime-grid">
-        <img src="s/anime1.jpg" alt="Anime Movie 1">
-        <img src="s/anime2.jpg" alt="Anime Movie 2">
-        <img src="s/anime3.jpg" alt="Anime Movie 3">
-        <img src="s/anime4.jpg" alt="Anime Movie 4">
+        <img alt="Anime Movie 1" class="movie-img"  src="anime1.jpg">
+        <img alt="Anime Movie 2" class="movie-img"  src="anime2.jpg">
+        <img alt="Anime Movie 3" class="movie-img"  src="anime3.jpg">
+        <img alt="Anime Movie 4" class="movie-img"  src="anime4.jpg">
     </div>
 </section>
 
@@ -275,37 +255,6 @@
 <footer>
     <p>© 2026 <span>ḾĎ ẞâƃɀr ẞë̈ʞk</span> | All Rights Reserved</p>
 </footer>
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-
-  // PLAY buttons
-  document.querySelectorAll(".btn-play").forEach(button => {
-    button.addEventListener("click", () => {
-      const url = button.dataset.playUrl;
-      if (url) {
-        window.open(url, "_blank", "noopener");
-      }
-    });
-  });
-
-  // DOWNLOAD buttons
-  document.querySelectorAll(".btn-download").forEach(button => {
-    button.addEventListener("click", () => {
-      const url = button.dataset.downloadUrl;
-      if (url) {
-        const a = document.createElement("a");
-        a.href = url;
-        a.download = "";
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-      }
-    });
-  });
-
-});
-</script>
 
 </body>
 </html>
